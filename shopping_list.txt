@@ -3,3 +3,4 @@ milk x3
 orange x5
 fish x4
 eggs x10
+watermelon x1
