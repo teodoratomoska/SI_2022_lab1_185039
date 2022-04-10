@@ -1,1 +1,1 @@
-# SI_2022_lab1_185039
+Teodora Tomoska 185039
