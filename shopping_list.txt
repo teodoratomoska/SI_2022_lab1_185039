@@ -1,5 +1,6 @@
 bread x1
-milk x2
+milk x3
 orange x5
-fish x4
-eggs x20
+kiwi x4
+eggs x10
+watermelon x1
