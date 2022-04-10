@@ -1,0 +1,128 @@
+~ git init (со оваа команда локално креирам git репозиториум)
+
+4. git clone https://github.com/teodoratomoska/SI_2022_lab1_185039 (го клонирам)
+~ cd SI_2022_lab1_185039 (влегувам во истиот)
+5. git add shopping_list.txt (го додавам фајлот во staging area)
+git commit -m  "Add 5 items to the shopping list" (и правам комит со порака)
+
+6. git commit -a -m "Add quantities to the items." (после додавањето количина, со оваа команда направив add + commit)
+
+7. git branch branch1 (креирам две нови гранки: branch1 и branch2)
+git branch branch2
+
+8. git log (по извршување на командата го добивам следното)
+commit 5ce52520ad1e011b2214e0d5f19dc103baa7141b (HEAD -> master, branch2, branch1)
+Author: Teodora <63468624+teodoratomoska@users.noreply.github.com>
+Date:   Sun Apr 10 15:19:14 2022 +0200
+
+    Add quantities to the items.
+
+commit 751e88b1b2763da40b1124ebebadf2f1c0682323
+Author: Teodora <63468624+teodoratomoska@users.noreply.github.com>
+Date:   Sun Apr 10 15:18:13 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit 8cb2a1e720022668a9e8cec9e3386912ff88c204 (origin/master, origin/HEAD)
+Author: teodoratomoska <teodora.tomoska@hotmail.com>
+Date:   Sun Apr 10 15:06:19 2022 +0200
+
+    Update README.md
+
+commit b82af73e5ea70b1397d84ce6f94ff0a2c4d2984b
+Author: teodoratomoska <teodora.tomoska@hotmail.com>
+Date:   Sun Apr 10 15:05:14 2022 +0200
+
+    Initial commit
+
+9. git push --all origin (ги синхронизирам сите гранки)
+
+10. git checkout branch1 (се префрлам на branch1)
+
+11. git commit -a -m "Change quantity of item #5" (после промената што ја направив правам add + commit)
+
+12. git checkout master (се префрлувам на master)
+
+13. git commit -a -m "Change quantity of item #2" (повторно после промената правам add + commit)
+
+14. git push --all origin (синхронизирам со оддалечениот репозиториум)
+
+15. git checkout branch2 (се префрлувам на branch2)
+
+16. git commit -a -m "Modify item #4" (после промената правам add + commit)
+
+17. git log (со оваа команда ја добивам следната документација)
+commit b38994380c053b30ec03c0ab2920a08f303c4786 (HEAD -> branch2)
+Author: Teodora <63468624+teodoratomoska@users.noreply.github.com>
+Date:   Sun Apr 10 15:39:29 2022 +0200
+
+    Modify item #4
+
+commit 5ce52520ad1e011b2214e0d5f19dc103baa7141b (origin/branch2)
+Author: Teodora <63468624+teodoratomoska@users.noreply.github.com>
+Date:   Sun Apr 10 15:19:14 2022 +0200
+
+    Add quantities to the items.
+
+commit 751e88b1b2763da40b1124ebebadf2f1c0682323
+Author: Teodora <63468624+teodoratomoska@users.noreply.github.com>
+Date:   Sun Apr 10 15:18:13 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit 8cb2a1e720022668a9e8cec9e3386912ff88c204
+Author: teodoratomoska <teodora.tomoska@hotmail.com>
+Date:   Sun Apr 10 15:06:19 2022 +0200
+
+    Update README.md
+
+commit b82af73e5ea70b1397d84ce6f94ff0a2c4d2984b
+Author: teodoratomoska <teodora.tomoska@hotmail.com>
+Date:   Sun Apr 10 15:05:14 2022 +0200
+
+    Initial commit
+
+*со овие две команди се враќам на последниот commit ако сум заборавила да го комитувам.
+18. git add shopping_list.txt (после додавањето на дополнителната ставка го додавам тоа за потоа да извршам commit)
+git commit --amend -m "Modify item #4 and add item #6" (со --amend додавам на последниот commit)
+
+19. git log
+commit 42943091ca6ead62958c8e89351fd335a76d45b1 (HEAD -> branch2)
+Author: Teodora <63468624+teodoratomoska@users.noreply.github.com>
+Date:   Sun Apr 10 15:39:29 2022 +0200
+
+    Modify item #4 and add item #6.
+
+commit 5ce52520ad1e011b2214e0d5f19dc103baa7141b (origin/branch2)
+Author: Teodora <63468624+teodoratomoska@users.noreply.github.com>
+Date:   Sun Apr 10 15:19:14 2022 +0200
+
+    Add quantities to the items.
+
+commit 751e88b1b2763da40b1124ebebadf2f1c0682323
+Author: Teodora <63468624+teodoratomoska@users.noreply.github.com>
+Date:   Sun Apr 10 15:18:13 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit 8cb2a1e720022668a9e8cec9e3386912ff88c204
+Author: teodoratomoska <teodora.tomoska@hotmail.com>
+Date:   Sun Apr 10 15:06:19 2022 +0200
+
+    Update README.md
+
+commit b82af73e5ea70b1397d84ce6f94ff0a2c4d2984b
+Author: teodoratomoska <teodora.tomoska@hotmail.com>
+Date:   Sun Apr 10 15:05:14 2022 +0200
+
+    Initial commit
+
+20. git checkout master (се префрлам на master)
+
+21. git merge branch1 (ја спојувам branch1 со master, со рекурзивна стратегија)
+
+22. git merge branch2 (кога пробувам да ја спојам branch2 со master ми се јавува конфилкт. За да ги спојам гранките мора да го решам конфликтот па затоа правам промена во втората количина од 4 во 7 и со тоа го решавам конфликтот)
+
+23. git commit -a -m "fix conflict" (правам commit како решение на конфликтот)
+
+24. git merge branch2 (успешно ги спојувам двете гранки)
